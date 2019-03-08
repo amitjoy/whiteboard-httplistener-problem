@@ -1,0 +1,18 @@
+-augment.1: \
+	org.apache.felix.http.jetty;\
+			capability:='osgi.service;\
+							objectClass=org.osgi.service.http.HttpService;\
+							effective:=active,\
+						 osgi.implementation;\
+						 	osgi.implementation=osgi.http'
+
+-augment.2: \
+	org.apache.felix.useradmin;\
+			capability:='osgi.service;\
+							objectClass=org.osgi.service.useradmin.UserAdmin;\
+							effective:=active,\
+						 osgi.implementation;\
+						 	osgi.implementation=osgi.useradmin'
+
+-runblacklist.extra: \
+	osgi.identity;filter:='(osgi.identity=com.qivicon.base.api)'

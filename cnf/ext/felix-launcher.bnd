@@ -1,0 +1,5 @@
+-runfw                          =         org.apache.felix.framework
+-runee                          =         JavaSE-1.8
+-runvm                          =         -ea
+-runsystempackages.sun          =         sun.misc, sun.reflect
+-runproperties.felix.log        =         felix.log.level=4

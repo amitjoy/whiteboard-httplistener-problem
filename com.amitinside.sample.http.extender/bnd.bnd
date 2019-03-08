@@ -1,0 +1,5 @@
+-buildpath: \
+	org.apache.felix.http.servlet-api,\
+	osgi.annotation,\
+	osgi.core,\
+	osgi.cmpn

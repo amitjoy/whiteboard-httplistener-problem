@@ -1,0 +1,30 @@
+-includeresource.all                  =         -src/main/resources
+-donotcopy                            =         \.gitignore|\.DS_Store
+
+javac.source                          =         1.8
+javac.target                          =         ${javac.source}
+javac.compliance                      =         ${javac.source}
+javac.debug                           =         on
+javac.encoding                        =         UTF-8
+
+-sources                              =         false
+-resolve.effective                    =         resolve, active
+-x-overwritestrategy                  =         gc
+-dsannotations                        =         *
+-metatypeannotations                  =         *
+-nouses                               =         true
+-nodefaultversion                     =         true
+
+src                                   =         src/main/java, src/main/resources
+bin                                   =         target/classes
+testsrc                               =         src/test/java
+testbin                               =         target/test-classes
+target-dir                            =         target
+
+-plugin.1.Runtime             = \
+    aQute.bnd.repository.maven.provider.MavenBndRepository; \
+          snapshotUrl         = "http://repo1.maven.org/maven2/"; \
+          releaseUrl          = "http://repo1.maven.org/maven2/"; \
+          noupdateOnRelease   = false; \
+          name                = "Runtime"; \
+          index               = runtime.maven

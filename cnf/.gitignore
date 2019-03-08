@@ -1,0 +1,8 @@
+/build/
+/generated/
+/bin/
+/cache/
+local.maven
+/baselinePARs/
+/core/local.bnd
+/local/
