@@ -38,7 +38,7 @@ public final class SampleServlet1 extends HttpServlet {
         createSession(request, response);
     }
     
-    public static void createSession(final HttpServletRequest httpRequest, final HttpServletResponse response) {
+    private static void createSession(final HttpServletRequest httpRequest, final HttpServletResponse response) {
             final HttpSession session = httpRequest.getSession();
             session.setAttribute(REMOTE_USER, "MyUser");
     }
