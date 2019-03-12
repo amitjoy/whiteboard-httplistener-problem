@@ -33,12 +33,12 @@ public final class SampleServlet1 extends HttpServlet {
 
     @Override
     protected void doGet(final HttpServletRequest request, final HttpServletResponse response) throws IOException {
-        logger.debug("[AuroraServlet] Processing GET Request: {}", request.getParameterMap());
+        logger.debug("[SampleServlet] Processing GET Request: {}", request.getParameterMap());
         response.getWriter().print("Servlet1 Response");
         createSession(request, response);
     }
     
-    private static void createSession(final HttpServletRequest httpRequest, final HttpServletResponse response) {
+    private void createSession(final HttpServletRequest httpRequest, final HttpServletResponse response) {
             final HttpSession session = httpRequest.getSession();
             session.setAttribute(REMOTE_USER, "MyUser");
     }
